@@ -8,7 +8,7 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />} />
-      <Route path='*' element={<div>Error 404: page not found</div>} />
+      <Route path='*' element={<div className='flex justify-center items-center h-[100vh]'>Nahh, nothing here... i just made one page application for one route</div>} />
     </Routes>
   </BrowserRouter>,
 )
