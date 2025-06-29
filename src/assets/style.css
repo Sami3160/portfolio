@@ -1,0 +1,17 @@
+.loader {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: #58c786;
+    animation: 1.5s pulse infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 #69ffa8;
+    }
+  
+    100% {
+      box-shadow: 0 0 0 8px #69ffa800;
+    }
+}
