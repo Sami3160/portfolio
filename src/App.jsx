@@ -4,6 +4,7 @@ import './assets/style.css'
 import * as motion from "motion/react-client";
 import { AnimatePresence } from "motion/react";
 import profile from "./assets/images/logo.png";
+import Socials from "./components/Socials";
 const About = React.lazy(() => import("./components/About"));
 function App() {
   const [showMore, setShowMore] = useState(false);
@@ -15,12 +16,12 @@ function App() {
             src={profile}
             alt=""
             srcset=""
-            className="h-12 w-12 shadow-slate-700 shadow-lg rounded-full"
+            className="h-32 w-32 shadow-slate-700 shadow-lg rounded-full"
           />
           <div className="">
-            <div className="name flex">Sami Bhadgaonkar</div>
+            <div className="name flex text-6xl">Sami Bhadgaonkar</div>
             <div
-              className="name text-gray-500 flex items-center gap-2"
+              className="name text-gray-500 text-2xl flex items-center gap-2"
               style={{ fontFamily: "Geist Thin" }}
             >
               Student | Dev | Ready to work!
@@ -28,6 +29,8 @@ function App() {
             </div>
           </div>
         </div>
+        <Socials />
+
         <About />
         <div className="about flex flex-col mt-4 gap-3">
           <div className="tech grid grid-cols-1 md:grid-cols-2 gap-y-3">
