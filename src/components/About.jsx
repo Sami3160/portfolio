@@ -173,7 +173,7 @@ export default function About() {
             and
             <span style={{ fontFamily: "Geist Light", color: "white" }}>
               {" "}
-              Web Pentesting{" "}
+              Cloud Computing{" "}
             </span>
           </p>
       

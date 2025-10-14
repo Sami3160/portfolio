@@ -21,7 +21,7 @@ export default function Socials() {
         <li onMouseEnter={()=>setHoveredPlatform("linkedin")} onMouseLeave={()=>setHoveredPlatform("")}>
           <a
           
-            href="https://www.github.com/sami3160"
+            href="https://www.linkedin.com/in/sami-bhadgaokar-285833225/"
             target="_blank"
             className="text-gray-500 hover:text-gray-900 cursor-pointer dark:hover:text-white dark:text-gray-400"
           >
@@ -60,7 +60,7 @@ export default function Socials() {
         </li>
         <li onMouseEnter={()=>setHoveredPlatform("leetcode")} onMouseLeave={()=>setHoveredPlatform("")}>
           <a
-            href="https://www.github.com/sami3160"
+            href="https://www.leetcode.com/sami3160"
             target="_blank"
             className="text-gray-500 hover:text-gray-900 cursor-pointer dark:hover:text-white dark:text-gray-400"
           >
