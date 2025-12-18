@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Portfolio Website",
+    "description": "A modern, terminal-themed portfolio website built with React and Tailwind CSS, featuring golden ratio layout and smooth animations.",
+    "tech": ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+    "github": "https://github.com/sami3160/portfolio",
+    "live": "https://sami-portfolio.vercel.app",
+    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop",
+    "status": "active"
+  },
+  {
+    "name": "Real-time Chat Application",
+    "description": "A real-time messaging application with socket.io, featuring private rooms, user authentication, and message history.",
+    "tech": ["Node.js", "Socket.io", "React", "MongoDB", "Express.js"],
+    "github": "https://github.com/sami3160/chat-app",
+    "live": null,
+    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop",
+    "status": "completed"
+  },
+  {
+    "name": "E-commerce Platform",
+    "description": "Full-stack e-commerce platform with payment integration, admin dashboard, and inventory management.",
+    "tech": ["React", "Node.js", "MongoDB", "Stripe API", "JWT"],
+    "github": "https://github.com/sami3160/ecommerce",
+    "live": "https://ecommerce-demo.vercel.app",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+    "status": "completed"
+  },
+  {
+    "name": "Task Management System",
+    "description": "A collaborative task management tool with drag-and-drop functionality, real-time updates, and team collaboration features.",
+    "tech": ["React", "Django", "PostgreSQL", "WebSockets"],
+    "github": "https://github.com/sami3160/task-manager",
+    "live": null,
+    "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop",
+    "status": "active"
+  }
+]
+

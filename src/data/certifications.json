@@ -1,0 +1,31 @@
+[
+  {
+    "name": "AWS Cloud Practitioner",
+    "issuer": "Amazon Web Services",
+    "date": "2024-03",
+    "status": "earned",
+    "visit": "https://www.credly.com/badges/aws-cloud-practitioner"
+  },
+  {
+    "name": "React Developer Certification",
+    "issuer": "Meta",
+    "date": "2023-11",
+    "status": "earned",
+    "visit": "https://www.coursera.org/professional-certificates/meta-react-developer"
+  },
+  {
+    "name": "JavaScript Algorithms and Data Structures",
+    "issuer": "freeCodeCamp",
+    "date": "2023-08",
+    "status": "earned",
+    "visit": "https://www.freecodecamp.org/certification/sami3160/javascript-algorithms-and-data-structures"
+  },
+  {
+    "name": "Node.js Backend Development",
+    "issuer": "Udemy",
+    "date": "2023-05",
+    "status": "earned",
+    "visit": "https://www.udemy.com/certificate/nodejs-backend"
+  }
+]
+

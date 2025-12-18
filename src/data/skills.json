@@ -1,0 +1,11 @@
+{
+  "Frontend": ["React", "Tailwind", "Material-UI (Basic)", "Framer-Motion", "ThreeJs (Learning)"],
+  "Backend": ["Node.js", "Django (Basic)", "Spring Boot (New)", "socket.io", "Express.js", "jsonwebtoken"],
+  "DevOps & Cloud": ["AWS (Basic)", "Docker (Basics)", "Kubernetes (Learning)", "docker-compose (Learning)"],
+  "Database": ["MongoDB", "Firebase (Basic)","PostgreSql", "SQL"],
+  "Security & Ethical Hacking": ["Linux, Parrot OS", "Nmap (Learning)", "PortSwigger (Learning)"],
+  "Machine Learning": ["MediaPipe (Using for pose estimation)"],
+  "Languages": ["Javascript (TypeScript)", "Java", "Python", "SQL"],
+  "Other Tools & Technologies": ["GitHub", "GIMP", "Linux"]
+}
+

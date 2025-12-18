@@ -1,0 +1,29 @@
+[
+  {
+    "year": "2023 - Present",
+    "institution": "DYP College of Engineering and Technology",
+    "location": "Bawda, Kolhapur",
+    "degree": "Bachelor in Technology",
+    "field": "Computer Engineering",
+    "batch": "2026",
+    "status": "current"
+  },{
+    "year": "2020 - 2023",
+    "institution": "Sant Gajanan Rural Polytechnic",
+    "location": "Mahagaon, Gadhinglaj",
+    "degree": "Diploma",
+    "field": "Computer Engineering",
+    "batch": "2023",
+    "status": "completed"
+  },
+  {
+    "year": "2019 - 2020",
+    "institution": "Ajara Highschool, Ajara",
+    "location": "Ajara",
+    "degree": "SSC",
+    "field": "General",
+    "batch": "2020",
+    "status": "completed"
+  }
+]
+

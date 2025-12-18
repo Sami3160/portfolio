@@ -1,0 +1,39 @@
+[
+  {
+    "company": "Prarambh Club, DYP",
+    "role": "Tech Team Lead",
+    "type": "Leadership",
+    "start": "2024-06",
+    "end": "present",
+    "description": "Leading the tech team, organizing workshops, and managing technical projects for the club.",
+    "color": "#00ff88"
+  },
+  {
+    "company": "Microsoft Learn Student Ambassador Club, DYP",
+    "role": "Tech Team Member",
+    "type": "Volunteer",
+    "start": "2024-06",
+    "end": "2025-04",
+    "description": "Contributing to technical initiatives and helping organize Microsoft-related events and workshops.",
+    "color": "#00a4ff"
+  },
+  {
+    "company": "Open Code Crafter",
+    "role": "Core Team Member",
+    "type": "Open Source",
+    "start": "2024-03",
+    "end": "2024-12",
+    "description": "Contributing to open source projects and maintaining core infrastructure.",
+    "color": "#ff6b6b"
+  },
+  {
+    "company": "Freelance Developer",
+    "role": "Full Stack Developer",
+    "type": "Freelance",
+    "start": "2023-08",
+    "end": "present",
+    "description": "Developed web applications for clients using React, Node.js, and MongoDB.",
+    "color": "#ffd93d"
+  }
+]
+
