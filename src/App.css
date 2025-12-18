@@ -25,37 +25,10 @@
   src: url('./assets/fonts/GeistMono-Regular.ttf');
 }
 
-body{
+body {
   font-family: "Geist Medium";
-}
-.gradient-background {
-  background: linear-gradient(299deg,#0d0d0d,#0d0d0d,#0d0d0d,#39424e,#0d0d0d,#1b1f25,#0d0d0d,#0d0d0d,#0d0d0d);
-  background-size: 540% 540%;
-  animation: gradient-animation 27s ease infinite;
-}
-
-.tech-item {
-  background-color: #131313;
-  border-radius: 7px;
-  border: 1px solid #1b1f25;
-  font-family: "Geist Light";
-  font-size: 0.8rem;
-  padding: 2px 7px;
-  margin: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  background: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
