@@ -1,29 +1,43 @@
 import { link } from "motion/react-m";
 import React, { useEffect } from "react";
 import { useState } from "react";
+import * as motion from "motion/react-client";
+import { AnimatePresence } from "motion/react";
 export default function Socials() {
-    const [githubDialog, setGithubDialog] = useState(false);
-    const [leetcodeDialog, setLeetcodeDialog] = useState(false);
-    const [linkedinDialog, setLinkedinDialog] = useState(false);
-    const [hoveredPlatform, setHoveredPlatform]=useState(false);
-  
-    useEffect(()=>{
-
-    },[githubDialog, leetcodeDialog, linkedinDialog])
-    function dialogProcess(platform){
-
-    }
+    const [hoveredPlatform, setHoveredPlatform] = useState(null);
+    const linkedinRef = React.useRef(null);
+    const githubRef = React.useRef(null);
+    const leetcodeRef = React.useRef(null);
+    
+    const getIconRef = (platform) => {
+        if (platform === "linkedin") return linkedinRef;
+        if (platform === "github") return githubRef;
+        if (platform === "leetcode") return leetcodeRef;
+        return null;
+    };
+    
   return (
-    <div className="relative">
-
-        <PlatformDialog platform={hoveredPlatform}/>
-      <ul className="flex justify-center mt-20 space-x-5">
-        <li onMouseEnter={()=>setHoveredPlatform("linkedin")} onMouseLeave={()=>setHoveredPlatform("")}>
+    <div className="relative mt-6">
+      <ul className="flex justify-start gap-6 relative">
+        <AnimatePresence>
+          {hoveredPlatform && (
+            <PlatformDialog 
+              platform={hoveredPlatform} 
+              iconRef={getIconRef(hoveredPlatform)}
+              key={hoveredPlatform}
+            />
+          )}
+        </AnimatePresence>
+        <li 
+          ref={linkedinRef}
+          onMouseEnter={()=>setHoveredPlatform("linkedin")} 
+          onMouseLeave={()=>setHoveredPlatform(null)}
+        >
           <a
-          
             href="https://www.linkedin.com/in/sami-bhadgaokar-285833225/"
             target="_blank"
-            className="text-gray-500 hover:text-gray-900 cursor-pointer dark:hover:text-white dark:text-gray-400"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-[#00ff88] cursor-pointer transition-colors duration-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,11 +52,16 @@ export default function Socials() {
           </a>
         </li>
 
-        <li onMouseEnter={()=>setHoveredPlatform("github")} onMouseLeave={()=>setHoveredPlatform("")}>
+        <li 
+          ref={githubRef}
+          onMouseEnter={()=>setHoveredPlatform("github")} 
+          onMouseLeave={()=>setHoveredPlatform(null)}
+        >
           <a
             href="https://www.github.com/sami3160"
             target="_blank"
-            className="text-gray-500 hover:text-gray-900 cursor-pointer dark:hover:text-white dark:text-gray-400"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-[#00ff88] cursor-pointer transition-colors duration-200"
           >
             <svg
               aria-hidden="true"
@@ -58,16 +77,21 @@ export default function Socials() {
             </svg>
           </a>
         </li>
-        <li onMouseEnter={()=>setHoveredPlatform("leetcode")} onMouseLeave={()=>setHoveredPlatform("")}>
+        <li 
+          ref={leetcodeRef}
+          onMouseEnter={()=>setHoveredPlatform("leetcode")} 
+          onMouseLeave={()=>setHoveredPlatform(null)}
+        >
           <a
             href="https://www.leetcode.com/sami3160"
             target="_blank"
-            className="text-gray-500 hover:text-gray-900 cursor-pointer dark:hover:text-white dark:text-gray-400"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-[#00ff88] cursor-pointer transition-colors duration-200"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-                fill="currentColor"
+              fill="currentColor"
               className="w-8 h-8"
               id="leetcode"
             >
@@ -80,21 +104,55 @@ export default function Socials() {
     </div>
   );
 }
-const PlatformDialog=({platform})=>{
-    const styleMap={
-        "linkedin":"justify-start",
-        "github":"justify-center",
-        "leetcode":"justify-end",
-    }
-      const dialogsList={
-        github:["I see you are interested in GitHub!", "Ahh, Man of Culture I see", "Well recently its dry mostly", "Thats nothing less than a deseart","WARNING: If you fear Js, leave now"],
-        leetcode:["Nahh, its not that impressive...", "Im not the DSA guy to begin with", "Really wanna see that??", "WAIT WAIT WAIT WAIT WAIT, NO NO NO NO NO!!", "Could have visited github over this"],
-        linkedin:["Hmm LinkedIn, classic!", "Lots of info there...", "Its boring", "Nothing much to flex there", "Wanna connect?..","Btw i use it for depression doses only", "Accept disoppointment before you go there" ]
-    }
-    if(!platform)return
-    return <div className={`w-full absolute h-10 -top-11 left-0 flex  ${styleMap[platform || "github"]} `}>
-        <div className={`bg-gray-200 text-black py-1 px-3 rounded-lg w-fit h-fit opacity-55`}>
-    {dialogsList[platform][Math.floor(Math.random()*dialogsList[platform].length)]}
-        </div>
-    </div>
+const PlatformDialog=({platform, iconRef})=>{
+    const [message, setMessage] = React.useState("");
+    const [position, setPosition] = React.useState({ left: 0, top: 0 });
+    
+    React.useEffect(() => {
+        if (platform && iconRef?.current) {
+            const dialogsList={
+                github:["I see you are interested in GitHub!", "Ahh, Man of Culture I see", "Well recently its dry mostly", "Thats nothing less than a deseart","WARNING: If you fear Js, leave now"],
+                leetcode:["Nahh, its not that impressive...", "Im not the DSA guy to begin with", "Really wanna see that??", "WAIT WAIT WAIT WAIT WAIT, NO NO NO NO NO!!", "Could have visited github over this"],
+                linkedin:["Hmm LinkedIn, classic!", "Lots of info there...", "Its boring", "Nothing much to flex there", "Wanna connect?..","Btw i use it for depression doses only", "Accept disoppointment before you go there" ]
+            };
+            const messages = dialogsList[platform] || [];
+            setMessage(messages[Math.floor(Math.random()*messages.length)]);
+            
+            // Calculate position relative to icon
+            const rect = iconRef.current.getBoundingClientRect();
+            const parentRect = iconRef.current.closest('ul')?.getBoundingClientRect();
+            if (parentRect) {
+                setPosition({
+                    left: rect.left - parentRect.left + rect.width / 2,
+                    top: -45
+                });
+            }
+        }
+    }, [platform, iconRef]);
+    
+    if(!platform || !message)return null
+    
+    return (
+        <motion.div 
+            className="absolute pointer-events-none z-20"
+            style={{
+                left: `${position.left}px`,
+                top: `${position.top}px`,
+                transform: 'translateX(-50%)'
+            }}
+            initial={{ opacity: 0, y: 5, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 5, scale: 0.9 }}
+            transition={{ duration: 0.2 }}
+        >
+            <div className="bg-black/95 backdrop-blur-sm border border-gray-700 text-gray-300 py-2 px-4 rounded shadow-lg w-fit max-w-xs" style={{ fontFamily: "Geist Light", fontSize: "0.85rem" }}>
+                <div className="flex items-center gap-2">
+                    <span className="text-gray-500">$</span>
+                    <span>{message}</span>
+                </div>
+                {/* Arrow pointer */}
+                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 rotate-45 w-2 h-2 bg-black border-r border-b border-gray-700"></div>
+            </div>
+        </motion.div>
+    );
 }
