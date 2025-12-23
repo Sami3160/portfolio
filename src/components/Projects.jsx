@@ -35,7 +35,7 @@ export default function Projects() {
       </div>
       <div className="terminal-header">
         <span className="terminal-prompt">$</span>
-        <span className="terminal-command">git log --oneline --all</span>
+        <span className="terminal-command">git log --oneline --all  (projects are not uploaded in json file, these are dummy ones)</span>
       </div>
       <div className="terminal-content relative z-10">
         <div className="projects-grid">

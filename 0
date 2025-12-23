@@ -1,2 +1,22 @@
 npm install
 npm audit fix
+npm run dev
+git status
+git add src/data/
+git commit -m "adding data for dynamic content"
+git config --global user.email "samibhadgaonkar@gmail.com"
+git commit -m "adding data for dynamic content"
+git push
+git push
+git status
+git add src/components/
+git commit -m "added new components with sample projects"
+git push
+git status
+git add .
+git commit -m "basic ui library config"
+git push
+cd Documents
+ls
+cd portfolio
+git status

@@ -1,31 +1,45 @@
 [
   {
-    "name": "AWS Cloud Practitioner",
-    "issuer": "Amazon Web Services",
-    "date": "2024-03",
+    "name": "Hands-on Introduction to Linux Commands and Shell Scripting",
+    "issuer": "IBM",
+    "date": "2025-07",
     "status": "earned",
-    "visit": "https://www.credly.com/badges/aws-cloud-practitioner"
+    "visit": "https://coursera.org/share/7e133ca0dc0c1e245a6066e8c80b450b"
   },
   {
-    "name": "React Developer Certification",
-    "issuer": "Meta",
-    "date": "2023-11",
+    "name": "Developing Back-End Apps with Node.js and Express",
+    "issuer": "IBM",
+    "date": "2025-03",
     "status": "earned",
-    "visit": "https://www.coursera.org/professional-certificates/meta-react-developer"
+    "visit": "https://coursera.org/share/7238a632bd056136eff63bd964b63687"
   },
   {
-    "name": "JavaScript Algorithms and Data Structures",
-    "issuer": "freeCodeCamp",
-    "date": "2023-08",
+    "name": "React - Working with Higher Order Components",
+    "issuer": "Coursera",
+    "date": "2024-11",
     "status": "earned",
-    "visit": "https://www.freecodecamp.org/certification/sami3160/javascript-algorithms-and-data-structures"
+    "visit": "https://coursera.org/share/3276149476d8f7da00229349ec8c2153"
   },
   {
-    "name": "Node.js Backend Development",
-    "issuer": "Udemy",
-    "date": "2023-05",
+    "name": "Web Development in Node.js",
+    "issuer": "Coursera",
+    "date": "2024-08",
     "status": "earned",
-    "visit": "https://www.udemy.com/certificate/nodejs-backend"
+    "visit": "https://coursera.org/share/94638183295dacf7d32492a60bdf4f4a"
+  },
+  {
+    "name": "Introduction to Software Engineering",
+    "issuer": "IBM",
+    "date": "2025-07",
+    "status": "earned",
+    "visit": "https://coursera.org/share/fb057768e760584fae6381042f8eeeaf"
+  },
+  {
+    "name": "Network Enumeration with Nmap",
+    "issuer": "Hack The Box",
+    "date": "2025-01",
+    "status": "earned",
+    "visit": "https://academy.hackthebox.com/achievement/1665627/19"
   }
 ]
 
