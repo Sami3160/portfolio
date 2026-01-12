@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import './assets/style.css'
 import * as motion from "motion/react-client";
@@ -13,8 +13,14 @@ import Projects from "./components/Projects";
 import FeedbackForm from "./components/FeedbackForm";
 import DarkVeil from "./bits components/DarkVeil";
 import PixelBlast from "./bits components/PixelBlast";
+import { useNavigate } from "react-router";
 
 function App() {
+  const navigate=useNavigate();
+  useEffect(() => {
+    navigate("https://sami-tech.site");
+    console.log("Redirecting to https://sami-tech.site");
+  }, []);
   return (
     <div className="terminal-bg min-h-screen w-full text-white relative z-10" >
         {/* Top particle effect */}
