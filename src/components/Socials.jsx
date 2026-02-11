@@ -113,7 +113,8 @@ const PlatformDialog=({platform, iconRef})=>{
             const dialogsList={
                 github:["I see you are interested in GitHub!", "Ahh, Man of Culture I see", "Well recently its dry mostly", "Thats nothing less than a deseart","WARNING: If you fear Js, leave now"],
                 leetcode:["Nahh, its not that impressive...", "Im not the DSA guy to begin with", "Really wanna see that??", "WAIT WAIT WAIT WAIT WAIT, NO NO NO NO NO!!", "Could have visited github over this"],
-                linkedin:["Hmm LinkedIn, classic!", "Lots of info there...", "Its boring", "Nothing much to flex there", "Wanna connect?..","Btw i use it for depression doses only", "Accept disoppointment before you go there" ]
+                linkedin:["Hmm LinkedIn, classic!", "Lots of info there...", "Its boring", "Nothing much to flex there", "Wanna connect?..","Btw i use it for depression doses only", "Accept disoppointment before you go there" ],
+                email:["Hmm LinkedIn, classic!", "Lots of info there...", "Its boring", "Nothing much to flex there", "Wanna connect?..","Btw i use it for depression doses only", "Accept disoppointment before you go there" ]
             };
             const messages = dialogsList[platform] || [];
             setMessage(messages[Math.floor(Math.random()*messages.length)]);
